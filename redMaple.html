@@ -1,0 +1,231 @@
+<!-- This HTML is for a red maple drawing game, that focuses on the outline
+ on the leaf. The user is to click on the buttons that are on the leaf, and
+ the buttons will change color and play a sound when clicked. The game is designed
+ with tailwind. 
+
+ @author: S M Riyad Farhan (CLART 2025)
+
+-->
+
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./redmaple.js"></script>
+
+  <!-- Prioritize Tailwind's utility classes -->
+  <link rel="stylesheet" href="./tailFlex.css"/>
+  <link rel="stylesheet" href="./tailFont.css"/>
+</head>
+
+<body onload="setup()"class="h-screen overflow-hidden flex flex-col bg-red-500">
+  <audio id="sound">
+    <source src="whistle.mp3" type="audio/mpeg">
+  </audio>
+    <audio id="allclickedSound">
+      <source src="successtrmp.mp3" type="audio/mpeg">
+    </audio>
+    <div class="outer-container bg-gradient-to-t from-red-300 via-red-400 to-red-300 overflow-hidden flex flex-col">
+        <!--Title-->
+        <div class="relative">
+          <img class="h-48 landscape:h-12 w-full border-2 border-red-700 object-bottom object-cover" src="./redMaple.jpg" alt="RED Maple Tree"/>
+          <div class="absolute inset-0 backdrop-blur-sm opacity-65"></div>
+
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span class="text-white text-3xl font-mono font-bold">Red Maple</span>
+            </div>
+        </div>
+        <div id="wellDoneOverlay" class="hidden absolute inset-0 flex items-center justify-center z-50 text-4xl text-white font-bold bg-black bg-opacity-50">
+            <span>Well Done!</span>
+        </div>
+        <!--Red Maple leaf-->
+        <div class="flex-1 overflow-auto flex justify-center items-center p-2">
+          <div class="relative block overflow-hidden rounded-3xl">
+              <img id="mapleLeafImage" class="max-h-[70vh] max-w-full object-contain mx-auto" src="./redMapleLeaf.jpg" alt="Red Maple"/>
+              <div class="absolute inset-0 bg-gradient-to-b from-red-100 via-red-800/80 border-solid
+              border-2 border bg-red-700 rounded-3xl opacity-50"></div>
+              <!-- Button 1 on Leaf -->
+              <button id="btn1"
+                  class="absolute top-[33%] left-[24%] bg-gradient-to-r from-green-500 
+                  to-white px-1 py-1 rounded-full shadow-lg">
+              </button>
+      
+              <!-- Button 2 on Leaf -->
+              <button id="btn2"
+                  class="absolute top-[83%] left-[46%]  bg-gradient-to-r from-green-500 
+                  to-white px-1 py-1 rounded-full shadow-lg">                  
+              </button>
+              <!-- Button 3 on Leaf -->
+              <button id="btn3"
+                  class="absolute top-[50%] left-[88%]  bg-gradient-to-r from-green-500 
+                  to-white px-1 py-1 rounded-full shadow-lg">
+              </button>
+              <!-- Button 4 on Leaf -->
+               <button id="btn4"
+                  class="absolute top-[28%] left-[9%]  bg-gradient-to-r from-green-500 
+                  to-white px-1 py-1 rounded-full shadow-lg">
+              </button>
+              <!-- Button 5 on Leaf -->
+              <button id="btn5"
+                  class="absolute top-[50%] left-[13%]  bg-gradient-to-r from-green-500 
+                  to-white px-1 py-1 rounded-full shadow-lg">
+              </button>
+              <!-- Button 6 on Leaf -->
+              <button id="btn6"
+                  class="absolute top-[60%] left-[27%]  bg-gradient-to-r from-green-500 
+                  to-white px-1 py-1 rounded-full shadow-lg">
+              </button>
+              <!-- Button 7 on Leaf -->
+              <button id="btn7"
+                  class="absolute top-[66%] left-[8%]  bg-gradient-to-r from-green-500 
+                  to-white px-1 py-1 rounded-full shadow-lg">
+              </button>
+              <!-- Button 8 on Leaf -->
+              <button id="btn8"
+                  class="absolute top-[77%] left-[20%]  bg-gradient-to-r from-green-500 
+                  to-white px-1 py-1 rounded-full shadow-lg">
+              </button>
+              <!-- Button 9 on Leaf -->
+              <button id="btn9"
+                  class="absolute top-[61%] left-[17%]  bg-gradient-to-r from-green-500 
+                  to-white px-1 py-1 rounded-full shadow-lg">
+              </button>
+              <!-- Button 10 on Leaf -->
+              <button id="btn10"
+                  class="absolute top-[74%] left-[37%]  bg-gradient-to-r from-green-500 
+                  to-white px-1 py-1 rounded-full shadow-lg">
+              </button>
+              <!-- Button 11 on Leaf -->
+              <button id="btn11"
+                  class="absolute top-[89%] left-[28%]  bg-gradient-to-r from-green-500 
+                  to-white px-1 py-1 rounded-full shadow-lg">
+              </button>
+              <!-- Button 12 on Leaf -->
+              <button id="btn12"
+                  class="absolute top-[84%] left-[39%]  bg-gradient-to-r from-green-500 
+                  to-white px-1 py-1 rounded-full shadow-lg">
+              </button>
+              <!-- Button 13 on Leaf -->
+              <button id="btn13"
+                  class="absolute top-[26%] left-[29%]  bg-gradient-to-r from-green-500 
+                  to-white px-1 py-1 rounded-full shadow-lg">
+              </button>
+              <!-- Button 14 on Leaf -->
+              <button id="btn14"
+                  class="absolute top-[45%] left-[38%]  bg-gradient-to-r from-green-500 
+                  to-white px-1 py-1 rounded-full shadow-lg">
+              </button>
+              <!-- Button 15 on Leaf -->
+              <button id="btn15"
+                  class="absolute top-[18%] left-[33%]  bg-gradient-to-r from-green-500 
+                  to-white px-1 py-1 rounded-full shadow-lg">
+              </button>
+              <!-- Button 16 on Leaf -->
+              <button id="btn16"
+                  class="absolute top-[6%] left-[33%]  bg-gradient-to-r from-green-500 
+                  to-white px-1 py-1 rounded-full shadow-lg">
+              </button>
+              <!-- Button 17 on Leaf -->
+              <button id="btn17"
+                  class="absolute top-[15%] left-[44%]  bg-gradient-to-r from-green-500 
+                  to-white px-1 py-1 rounded-full shadow-lg">
+              </button>
+              <!-- Button 18 on Leaf -->
+              <button id="btn18"
+                  class="absolute top-[22%] left-[49%]  bg-gradient-to-r from-green-500 
+                  to-white px-1 py-1 rounded-full shadow-lg">
+              </button>
+              <!-- Button 19 on Leaf -->
+              <button id="btn19"
+                  class="absolute top-[17%] left-[53%]  bg-gradient-to-r from-green-500 
+                  to-white px-1 py-1 rounded-full shadow-lg">
+              </button>
+              <!-- Button 20 on Leaf -->
+              <button id="btn20"
+                  class="absolute top-[28%] left-[57%]  bg-gradient-to-r from-green-500 
+                  to-white px-1 py-1 rounded-full shadow-lg">
+              </button>
+              <!-- Button 21 on Leaf -->
+              <button id="btn21"
+                  class="absolute top-[24%] left-[64%]  bg-gradient-to-r from-green-500 
+                  to-white px-1 py-1 rounded-full shadow-lg">
+              </button>
+              <!-- Button 22 on Leaf -->
+              <button id="btn22"
+                  class="absolute top-[37%] left-[57%]  bg-gradient-to-r from-green-500 
+                  to-white px-1 py-1 rounded-full shadow-lg">
+                </button>
+                <!-- Button 23 on Leaf -->
+                <button id="btn23"
+                    class="absolute top-[13%] left-[78%]  bg-gradient-to-r from-green-500 
+                    to-white px-1 py-1 rounded-full shadow-lg">
+                </button>
+                <!-- Button 24 on Leaf -->
+                <button id="btn24"
+                    class="absolute top-[26%] left-[78%]  bg-gradient-to-r from-green-500 
+                    to-white px-1 py-1 rounded-full shadow-lg">
+                </button>
+                <!-- Button 25 on Leaf -->
+                <button id="btn25"
+                    class="absolute top-[37%] left-[76%]  bg-gradient-to-r from-green-500 
+                    to-white px-1 py-1 rounded-full shadow-lg">
+                </button>
+                <!-- Button 26 on Leaf -->
+                <button id="btn26"
+                    class="absolute top-[36%] left-[80%]  bg-gradient-to-r from-green-500 
+                    to-white px-1 py-1 rounded-full shadow-lg">
+                </button>
+                <!-- Button 27 on Leaf -->
+                <button id="btn27"
+                    class="absolute top-[51%] left-[72%]  bg-gradient-to-r from-green-500 
+                    to-white px-1 py-1 rounded-full shadow-lg">
+                </button>
+                <!-- Button 28 on Leaf -->
+                <button id="btn28"
+                    class="absolute top-[63%] left-[74%]  bg-gradient-to-r from-green-500 
+                    to-white px-1 py-1 rounded-full shadow-lg">
+                </button>
+                <!-- Button 29 on Leaf -->
+                <button id="btn29"
+                    class="absolute top-[65%] left-[76%]  bg-gradient-to-r from-green-500 
+                    to-white px-1 py-1 rounded-full shadow-lg">
+                </button>
+                <!-- Button 30 on Leaf -->
+                <button id="btn30"
+                    class="absolute top-[69%] left-[58%]  bg-gradient-to-r from-green-500 
+                    to-white px-1 py-1 rounded-full shadow-lg">
+                </button>
+                <!-- Button 31 on Leaf -->
+                <button id="btn31"
+                    class="absolute top-[91%] left-[77%]  bg-gradient-to-r from-green-500 
+                    to-white px-1 py-1 rounded-full shadow-lg">
+                </button>
+          </div>
+          
+      </div>
+      <!-- Progress Bar for buttons clicked -->
+      <div class="relative w-full mt-5">
+        <div class="w-full bg-gray-300 h-2 rounded-full">
+            <div id="progressBar" class="bg-gradient-to-r from-green-500 to-lime-500 h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
+        </div>
+    </div>
+
+        <!--Play Again Button-->
+        <div class="flex justify-center mt-3 items-center bg-red-300 border-t border-red-500">
+          <form action="./homepage.html">
+              <button type="submit" 
+                  class="bg-gradient-to-t from-red-200 via-red-500 to-red-200 text-white 
+                  text-2xl font-mono font-bold py-5 px-32 rounded-lg shadow-black
+                  hover:bg-gradient-to-t hover:from-red-800 hover:via-red-200 hover:to-red-800 
+                  transition-transform duration-300 hover:scale-110 
+                  active:scale-95 border-[0.25px] border-red-300 landscape:py-3 landscape:px-16 landscape:text-xl">
+                  Play Again
+              </button>
+          </form>
+    </div>
+</body>
+</html>

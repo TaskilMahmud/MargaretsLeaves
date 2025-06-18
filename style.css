@@ -1,0 +1,71 @@
+/* 
+    File: style.css
+    Purpose: This stylesheet designs the title bar the image and the button 
+
+
+    Author: Taskil Mahmud  A00478324
+    Date: 15/03/2025
+*/
+
+/* Global body styling for layout and background */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #1C1F2A, #2E4053); /* Dark navy to steel blue */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Title bar styling for the header */
+.title-bar {
+    width: 100%;
+    height: 25vh;
+    background: linear-gradient(to right, #A8DADC, #F1FAEE); /* Soft teal to light cream */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #1D3557; /* Deep blue for contrast */
+    font-size: 6vh;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Styling for the main image */
+img {
+    width: 80vw;
+    max-width: 350px;
+    height: 80vw;
+    max-height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #457B9D; 
+    margin-top: 2vh;
+}
+
+/* Button styling  */
+button {
+    width: 80vw;
+    max-width: 400px;
+    padding: 40px;
+    font-size: 24px;
+    background: linear-gradient(to right, #457B9D, #A8DADC); 
+    color: #1D3557; 
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    margin-bottom: 5vh;
+}
+
+/* Button hover effect */
+button:hover {
+    background: linear-gradient(to right, #2C5985, #8FC1B5);
+    transform: scale(1.05);
+}

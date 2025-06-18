@@ -1,0 +1,87 @@
+<!doctype html>
+<!--
+  The purpose of this file is to create the Coastal Yellow Birch Tree subpage for our game
+
+  author: Mark Louis Tabudlong
+-->
+<html>
+  <head>
+    <title>Coastal Yellow Birch Leaf</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./yellowBirch.js"></script>
+    <style>
+      /*
+        Animation for "Click the Buttons" message
+      */
+      @keyframes fade-in {
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes fade-out {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body onload="setup()" class="bg-yellow-500">
+    <!--Audio Elements-->
+    <audio id="sound">
+      <source src="ding.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="finishedSound">
+      <source src="finished.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 min-h-screen overflow-hidden">
+      <!--Title-->
+      <div class="relative h-[160px] landscape:h-[100px]">
+        <img class="h-full w-full object-cover object-top" src="./yellowBirch.jpg" alt="Coastal Yellow Birch Tree"/>
+        <!--Add gray overlay over banner-->
+        <div class="absolute inset-0 bg-gray-700 opacity-60"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center">
+          <span class="text-yellow-200 text-3xl landscape:text-4xl font-mono font-bold">Coastal Yellow Birch</span>
+        </div>
+      </div>
+
+      <!--Changes Layout in Landscape Mode-->
+      <div class="landscape:flex landscape:flex-row landscape:items-center landscape:justify-center landscape:gap-5 landscape:px-5">
+        <!--Leaf Container-->
+        <div class="landscape:flex-1 landscape:flex landscape:justify-center">
+          <div class="flex justify-center items-center p-4 max-h-[calc(100vh-200px)] landscape:max-h-[calc(100vh-120px)]">
+            <div class="relative block overflow-hidden border-2 border-solid border-yellow-700 rounded-3xl shadow-xl h-full landscape:relative">
+              <!--Image of leaf-->
+              <img id="imageDiv" class="h-auto w-full max-h-[calc(100vh-200px)] object-contain landscape:max-h-[calc(100vh-120px)] landscape:h-full landscape:w-auto mx-auto" src="./yellowBirchLeaf.jpg" alt="Coastal Yellow Birch Leaf"/>
+              
+              <!--Give user a message-->
+              <div class="absolute inset-0 flex items-center justify-center landscape:absolute landscape:left-1/2 landscape:top-1/2 landscape:transform landscape:-translate-x-1/2 landscape:-translate-y-1/2 landscape:w-full landscape:text-center">
+                <span id="message" class="text-yellow-400 text-3xl font-mono font-bold opacity-0 animate-[fade-in_0.3s_ease-in_forwards,fade-out_2s_0.8s_ease-out_forwards]">Click the buttons!</span>
+              </div>
+              
+              <!--Divs for buttons to be placed-->
+              <div id="buttonDiv1" class="flex-none"></div>
+              <div id="buttonDiv2" class="flex-none"></div>
+              <div id="buttonDiv3" class="flex-none"></div>
+              <div id="buttonDiv4" class="flex-none"></div>
+              <div id="buttonDiv5" class="flex-none"></div>
+              <div id="buttonDiv6" class="flex-none"></div>
+              <div id="buttonDiv7" class="flex-none"></div>
+            </div>
+          </div>
+        </div>
+  
+        <!--Play Again Button-->
+        <div id="playAgain" class="flex justify-center mt-3 mb-4 landscape:m-0 landscape:self-center"></div>
+      </div>
+    </div>
+  </body>
+</html>

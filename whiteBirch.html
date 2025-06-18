@@ -1,0 +1,75 @@
+<!doctype html>
+
+<!--
+  Leaf subpage
+
+  author: Colin
+-->
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Adds Tailwind Play CDN script 
+        Note (CDN) can be Content Delivery Network or Content Distribution Network
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Update Tailwind config file -->
+    <script src="./tailFont.js"></script>
+    <script src="./whiteBirch.js"></script>
+
+    <!-- Prioritize Tailwind's utility classes -->
+    <link rel="stylesheet" href="./tailFont.css"/>
+  </head>
+
+  <!---Main Body Setup-->
+  <body onload="setup()" class="bg-neutral-600">
+    <audio id="sound">
+    <source src="wave.mp3" type="audio/mpeg">
+  </audio>
+
+  </div>
+    <div class="flex flex-col flex-none text-6xl text-center text-neutral-100 font-mono font-bold h-64">
+      <!--Header-->
+      <div class="relative">
+        <img class="h-40 w-full object-cover object-top" src="./whiteBirch.jpg" alt="Costal White Birch Trees"/>
+        <div class="absolute inset-0 bg-gray-700 opacity-60"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center">
+          <span>
+            White Birch
+          </span>
+        </div>
+      </div>
+
+      <!--Body-->
+      <div class="flex-none flex items-center justify-center bg-neutral-200 p-5">
+        <img class="h-full border-double border-8 rounded-full border-neutral-700" src="./whiteBirchLeaf.jpg" alt="White Birch Leaf" id="imageDiv"/>
+          <div id="buttonDiv1" class="flex-none"></div>
+          <div id="buttonDiv2" class="flex-none"></div>
+          <div id="buttonDiv3" class="flex-none"></div>
+          <div id="buttonDiv4" class="flex-none"></div>
+          <div id="buttonDiv5" class="flex-none"></div>
+          <div id="buttonDiv6" class="flex-none"></div>
+          <div id="buttonDiv7" class="flex-none"></div>
+          <div id="buttonDiv8" class="flex-none"></div>
+          <div id="buttonDiv9" class="flex-none"></div>
+          <div id="buttonDiv10" class="flex-none"></div>
+          <div id="buttonDiv11" class="flex-none"></div>
+          <div id="buttonDiv12" class="flex-none"></div>
+      </div>
+
+      <!--Return Button-->
+      <div class="flex-none text-5xl text-center text-neutral-100 py-10">
+        <form action="./homepage.html">
+          <button type="submit">
+            <div id="return" class="bg-neutral-700 py-5 px-5 rounded-lg">Return</div>
+          </button>
+        </form>
+      </div>
+      
+    </div>
+  </body>
+</html>

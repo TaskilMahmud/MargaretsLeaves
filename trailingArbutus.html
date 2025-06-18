@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- 
+    File: TrailingArbitus.html
+    Purpose: This file creates a responsive layout displaying an image and button
+    with a title bar. Designed for mobile-friendly use.
+    There are 11 buttons all around the leaf 
+    The color changes and a sound is played when the buttons are clicked
+
+    Author: Taskil Mahmud   A00478324
+    Date: 31/03/2025
+-->
+
+
+<html lang="en">
+<head>
+  <title>Trailing Arbutus</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="TrailingArbutus.js"></script>
+ 
+</head>
+
+<body onload="setup()" class="flex flex-col items-center bg-gray-900 text-white min-h-screen">
+
+  <!-- Header -->
+  <div class="w-full h-20 flex items-center justify-center bg-blue-300 text-blue-900 text-4xl font-bold fixed top-0 left-0">
+    Trailing Arbutus
+  </div>
+
+  <!-- Sound -->
+  <audio id="sound">
+    <source src="audio/squeak.wav" type="audio/mpeg">
+  </audio>
+
+  <!-- Image -->
+  <div id="imageDiv" class="flex-none mt-32"></div>
+
+  <!-- Button Divs -->
+  <div id="Button1" class="flex-none"></div>
+  <div id="Button2" class="flex-none"></div>
+  <div id="Button3" class="flex-none"></div>
+  <div id="Button4" class="flex-none"></div>
+  <div id="Button5" class="flex-none"></div>
+  <div id="Button6" class="flex-none"></div>
+  <div id="Button7" class="flex-none"></div>
+  <div id="Button8" class="flex-none"></div>
+  <div id="Button9" class="flex-none"></div>
+  <div id="Button10" class="flex-none"></div>
+  <div id="Button11" class="flex-none"></div>
+  <div id="Button12" class="flex-none"></div>
+
+  <!-- Try Again Button -->
+  <div class="mt-[500px] mb-12">
+    <a href="./homepage.html">
+      <button class="px-8 py-4 bg-blue-500 text-white text-2xl font-semibold rounded-lg hover:bg-blue-600">
+        Try Again
+      </button>
+    </a>
+  </div>
+</body>
+</html>

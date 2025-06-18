@@ -1,0 +1,77 @@
+<!doctype html>
+
+<!--
+  Subpage for Margaret's Leaves
+
+  author: Abdunasr Yesuf (A00482825)
+-->
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Adds Tailwind Play CDN script 
+       Note (CDN) can be Content Delivery Network or Content Distribution Network
+  -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Update Tailwind config file -->
+  <script src="./NorthernBayberry.js"></script>
+
+  <!-- Prioritize Tailwind's utility classes -->
+  <link rel="stylesheet" href="NorthernBayberry.css">
+</head>
+
+<body onload="setup()" class="bg-green-500">
+  <audio id="sound">
+    <source src="click.wav" type="audio/mpeg">
+  </audio>
+  <audio id="win">
+    <source src="win.mp3" type="audio/mpeg">
+  </audio>
+
+<body class="bg-neutral-600">
+  <div class="flex flex-col flex-none text-6xl text-center text-neutral-100 font-mono font-bold">
+    <!--Header-->
+    <div class="relative">
+      <img class="h-10 w-full object-cover object-top" src="./northernBayberry.jpg" alt="Northern Bayberry"/>
+      <div class="absolute inset-0 bg-green-700 opacity-60"></div>
+
+      <div class="absolute inset-0 flex items-center justify-center">
+        <span>
+            <span class="text-green-500 text-4xl">Northern Bayberry</span>
+        </span>
+      </div>
+    </div>
+    
+    <!--Northern Bayberry Leaf-->
+    <div class="flex-none p-4">
+      <div class="landscape:flex-1 landscape:flex landscape:justify-center">
+        <div class="flex justify-center items-center p-4 max-h-[calc(100vh-200px)] landscape:max-h-[calc(100vh-120px)]"></div>
+          <div class="relative block overflow-hidden border-2 border-solid border-green-700 rounded-3xl shadow-xl h-full landscape:relative">
+      <div class="relative block overflow-hidden border-solid border-2 border-green-700 rounded-3xl">
+        <img id="imageDiv" class="h-30 w-full" src="./Northern Bayberry Leaf.jpg" alt="Northern Bayberry Tree"/>
+        <div id="buttonDiv1" class ="flex-none"></div>
+        <div id="buttonDiv2" class="flex-none"></div>
+        <div id="buttonDiv3" class="flex-none"></div>
+        <div id="buttonDiv4" class="flex-none"></div>
+        <div id="buttonDiv5" class="flex-none"></div>
+        <div id="buttonDiv6" class="flex-none"></div>
+        <div id="buttonDiv7" class="flex-none"></div>       
+      </div>
+    </div>
+
+    <!--Button-->
+    <div class="flex-none text-5xl text-center text-neutral-100 py-10">
+      <form action="./homepage.html">
+        
+        <button type="submit" class="bg-green-500 py-5 px-5 rounded-lg">
+            Play Again
+            </button>
+        
+      </form>
+    </div>
+    
+  </div>
+</body>

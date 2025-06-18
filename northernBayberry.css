@@ -1,0 +1,44 @@
+/* 
+    
+    This stylesheet contains the global styling for Northern Bayberry.
+
+
+    author: Abdunasr Yesuf (A00482825)
+*/
+
+/* Global body styling for layout and background */
+body {
+    background: linear-gradient(to bottom, #19fe00, #0dff00); 
+}
+
+/* Title bar styling for the header */
+.title-bar {
+    background: linear-gradient(to right, #aedca8, #F1FAEE); 
+    color: #00a11d; 
+    font-size: 6vh;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Styling for the main image */
+img {
+    border: 5px solid #00f020; 
+}
+
+/* Button styling  */
+button {
+    
+    background: linear-gradient(to right, #00ff2f, #00ff2f); 
+    color: #1d5721; 
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    margin-bottom: 5vh;
+}
+
+/* Button hover effect */
+button:hover {
+    background: linear-gradient(to right, #04ff007c, #12c909);
+    transform: scale(1.05);
+}
