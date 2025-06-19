@@ -113,7 +113,7 @@ function finishedEffect() {
         if (currentButton == 8) {
             clearInterval(setColors);
             document.getElementById("playAgain").innerHTML =
-                "<form action=" + "./homepage.html>" +
+                "<form action=" + "./index.html>" +
                 "<button type=" + "submit" +
                 " class=\"bg-yellow-500 text-white text-2xl font-mono font-bold py-5 px-20 rounded-lg shadow-md\">" +
                 "Play Again</button></form>";
